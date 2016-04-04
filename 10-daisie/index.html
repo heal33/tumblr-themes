@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<!---- 
+
+     More themes @ http://castlenovathemes.tumblr.com
+         
+
+  ___ __    __ _____ _   ___ __  _  __   _   _   __   
+ / _//  \ /' _/_   _| | | __|  \| |/__\ | \ / | /  \  
+| \_| /\ |`._`. | | | |_| _|| | ' | \/ |`\ V /'| /\ | 
+ \__/_||_||___/ |_| |___|___|_|\__|\__/   \_/  |_||_|
+ 
+ 
+ ✿ HEADER
+ ✿ SIDEBAR
+ ✿ NAVIGATION
+ ✿ ENTRIES
+ ✿ PAGINATION
+ ✿ FOOTER
+
+-->
+
+<!-- ******** I M A G E S ******** -->
+<meta name="image:Background Image" content=""/>
+<meta name="image:Post Background Image" content=""/>
+<meta name="image:Sidebar Image" content=""/>
+
+
+<!-- ******** C O L O R S ******** --> 
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Title" content="#8ba4a5"/>
+<meta name="color:Navbar Background 1" content="#fefbf8"/>
+<meta name="color:Navbar Text" content="#2b2b2b"/>
+<meta name="color:Navbar Text Hover" content="#2b2b2b"/>
+<meta name="color:Nav Hover" content="pink"/>
+<meta name="color:Post Background 1" content="#fefbf8"/>
+<meta name="color:Post Text" content="#2b2b2b"/>
+<meta name="color:Post Footer Text" content="#aaaaaa"/>
+<meta name="color:Tag Text" content="#cccccc"/>
+<meta name="color:Tag List Hover" content="pink"/>
+<meta name="color:Link" content="#b8cdd1"/>
+<meta name="color:Pagination" content="#a8a8a8"/>
+<meta name="color:Footer" content="#888"/>
+<meta name="color:Scrollbar" content="#3a5a84"/>
+<meta name="color:Scrollbar Background" content="#000"/>
+<meta name="color:Sidebar Background" content="#fff"/>
+<meta name="color:Sidebar Text" content="#555"/>
+
+
+
+
+<!-- ******** T E X T ******** -->
+<meta name="text:Link 1" content="About"/>
+<meta name="text:Link 1 URL" content="/"/>
+<meta name="text:Link 2" content="Ask"/>
+<meta name="text:Link 2 URL" content="/ask"/>
+<meta name="text:Link 3" content="Link 3"/>
+<meta name="text:Link 3 URL" content=""/>
+<meta name="text:Link 4" content="Link 4"/>
+<meta name="text:Link 4 URL" content=""/>
+<meta name="text:Link 5" content="Link 5"/>
+<meta name="text:Link 5 URL" content=""/>
+<meta name="text:Link 6" content="Link 6"/>
+<meta name="text:Link 6 URL" content=""/>
+<meta name="text:Link 7" content="Link 7"/>
+<meta name="text:Link 7 URL" content=""/>
+<meta name="text:Link 8" content="Link 8"/>
+<meta name="text:Link 8 URL" content=""/>
+<meta name="text:TumblrName" content=""/>
+
+ 
+<!-- ******** B O O L E A N S ******** -->
+<meta name="if:Show Tags" content="1"/>
+<meta name="if:Reblog and Like Buttons" content="1"/>
+<meta name="if:Post Footer" content="1"/>
+<meta name="if:Display Footer" content="1"/>
+<meta name="if:Display Captions" content="1"/>
+<meta name="if:500px Post" content="1"/>
+<meta name="if:Show Tag List" content="1"/>
+
+
+<!-- ******** G O O G L E   F O N T S ******** -->
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+
+<!-- ******** J Q U E R Y ******** -->
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<style type="text/css">
+
+
+
+ /*
+ ======================================================================
+ 
+                            *** F O N T S ***
+        
+ ======================================================================
+ */
+
+body {
+    font-family:'Quicksand', sans-serif; 
+    font-size: 12px;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.nav {
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+}
+
+.logo, #pagination {
+     text-align: center;
+ }
+ 
+#pagination {
+    font-size: .8em;
+}
+
+#pagination a {
+
+}
+
+ .sidebar-content {
+     font-size: .9em;
+ }
+ 
+  .sidebar-div h3 {
+     font-weight: normal;
+ }
+
+.post h1 {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.info {
+    font-family: 'Roboto', sans-serif;
+}
+
+.tags {
+    font-size: .7em;
+    text-transform: uppercase;
+}
+
+.dates {
+    font-size: .8em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.reblogged {
+    opacity: .6;
+    font-size: 400;
+    font-size: .8em;
+}
+
+footer {
+    font-size: .9em;
+}
+
+
+ /*
+ ======================================================================
+ 
+                            *** C O L O R S ***
+        
+ ======================================================================
+ */
+
+a {
+    color:{color:link};
+}
+
+body {
+    background:{color:background};
+    background-image: url("{image:Background Image}");
+    color:{color:text};
+    background-attachment: fixed;
+}
+
+#description {
+}
+
+footer {
+    color: {color:Footer};    
+}
+
+.info a {
+    color: {color:Post Footer Text};
+}
+
+.nav, .nav-stacked {
+     background-color:{color:Navbar Background 1};     
+}
+
+.nav li a {
+    color: {color:Navbar Text}; 
+
+}
+
+.nav li a:hover {
+    color: {color:Navbar Text Hover};
+    opacity: .8;
+    background-color: {color:Nav Hover};
+}
+
+#pagination a {
+    color:{color:Pagination};
+}
+
+#tagCloud ul li:hover {
+    background-color: {color:Tag List Hover};
+}
+
+
+.post {
+    background-image: url("{image:Post Background Image}");
+    background-color:{color:Post Background 1};
+    color: {color:Post Text};
+    box-shadow: 0 0 5px #ccc;
+}
+
+.sidebar {
+    background-color: {color:Sidebar Background};
+    color: {color:Sidebar Text};
+}
+
+.tags a {
+    color: {color:Tag Text};
+}
+
+.title a{
+    color: {color:Title};
+
+}
+
+
+
+ /*
+ ======================================================================
+ 
+                            *** L A Y O U T ***
+        
+ ======================================================================
+ */
+
+::-webkit-scrollbar {width: 6px; height: 4px; background: {color:Scrollbar Background}; }
+::-webkit-scrollbar-thumb { background-color: {color:Scrollbar}; -webkit-border-radius: 1ex; }
+ 
+body {
+    margin:0px;
+}
+ 
+a {
+    text-decoration:none;
+    outline:none;
+    -moz-outline-style:none;
+}
+ 
+img {
+    border:none;
+}
+ 
+blockquote {
+    padding-left:5px;
+    border-left:4px solid;
+    margin-left: 20px;
+}
+   
+blockquote blockquote {
+    padding-left:5px;
+    border-left:4px solid;
+    margin-left: 20px;
+}
+
+.title {
+    padding: 10px 0 0px 0;
+    box-sizing: border-box;
+}
+
+
+
+ /*
+ ======================================================================
+                            H E A D E R
+ ======================================================================
+ */
+ 
+ .title {
+     width: 800px;
+     margin: 0 auto;
+     padding: 20px 20px;
+ }
+ 
+
+ /*
+ ======================================================================
+                            N A V I G A T I O N
+ ======================================================================
+ */
+ 
+header {
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: -40px;
+}
+
+.nav li {
+    display: inline-block;
+     padding: 10px 0px;  
+ }
+ 
+ .nav li a {
+    padding: 10px 20px;   
+ }
+ 
+ .main-nav-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    opacity: .7;
+}
+
+ .container {
+    width: 800px;
+    margin: 0 auto;
+    display: none;
+    padding-top:80px;
+ }
+
+
+ /*
+ ======================================================================
+                            P O S T
+ ======================================================================
+ */
+ 
+ .entries {
+     float: left;
+ }
+ 
+  {block:IfNot500pxPost}
+.post {
+     width: 400px;
+ } {/block:IfNot500pxPost}
+  
+ 
+ {block:If500pxPost}
+.post {
+   width: 500px;  
+ } {block:If500pxPost}
+
+.dates {
+    float: left;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+
+.post-buttons {
+    float: right;
+}
+
+.post-buttons ul, .post-buttons li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.post-buttons li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.post-text {
+    padding: 15px 15px 5px 15px;
+}
+
+.info {
+    padding: 5px 15px 15px 15px;
+}
+
+.tags a {
+    margin-right: 4px;
+}
+
+#pagination {
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+#pagination a, .current_page {
+    padding: 4px 10px;
+}
+
+
+ 
+#asker {
+    float:left;
+    margin-right:5px;
+}
+
+
+ /*
+ ======================================================================
+                            S I D E B A R
+ ======================================================================
+ */
+ 
+ .sidebar {
+     width: 250px;
+     float: right;
+ }
+ 
+ .sidebar-div {
+    padding: 10px 10px;
+ }
+ 
+ .sidebar-div h3 {
+     margin: 0 0 5px 0;
+     padding: 5px 0px;
+     border-bottom: 1px dashed {color:Sidebar Text};
+ }
+ 
+ .sidebar-content {
+     margin: 0;
+ }
+ 
+ .sidebar-img {
+     text-align: center;
+ }
+ 
+ .sidebar-img img{
+     width: 100%;
+     border-radius: 3px;
+ }
+ 
+#tagCloud ul li {
+    padding: 4px 5px;
+}
+
+#tagCloud {
+}
+
+#tagCloud ul {
+    margin: 0;
+}
+
+
+/*
+ ======================================================================
+                            F O O T E R
+ ======================================================================
+ */
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*
+ ======================================================================
+                            M I S C
+ ======================================================================
+ */
+
+.clearfix {
+    clear: both;
+}
+
+#cn {
+    position:fixed;
+    padding:0px 10px;
+    bottom:0;
+    right:0;
+    opacity: .5;
+}
+
+#cn:hover {
+}
+
+#credit {
+    display: none;
+}
+
+
+
+{CustomCSS}
+    
+</style>
+
+    
+</head>
+
+
+
+
+ <!--
+ ======================================================================
+ 
+                            *** H T M L ***
+        
+ ======================================================================
+ -->
+ 
+<body>
+
+<header>
+<div class="title"><a href="/">{Title}</a></div>
+    <nav class="main-nav">
+        <ul class="nav">
+            <li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>
+            <li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>
+            <li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>
+            <li><a href="{text:Link 4 URL}">{text:Link 4}</a></li>
+            <li><a href="{text:Link 5 URL}">{text:Link 5}</a></li>
+            <li><a href="{text:Link 6 URL}">{text:Link 6}</a></li>
+            <li><a href="{text:Link 7 URL}">{text:Link 7}</a></li>
+            <li><a href="{text:Link 8 URL}">{text:Link 8}</a></li>
+    
+        </ul>
+    </nav>
+
+    
+</header>
+    
+<div class="container">
+    
+    <div class="entries">
+    {block:Posts}
+    
+    <div class="post">
+            
+        {block:Text}<div class="post-text"><h1>{block:Title}<a href="{Permalink}">{Title}</a>{/block:Title}</h1>{Body}</div>{/block:Text}
+                 
+        {block:Photo}{LinkOpenTag}
+        <a href="{Permalink}">
+        {block:IfNot500pxPost}
+        <img src="{PhotoURL-400}" />
+        {/block:IfNot500pxPost}
+        
+         {block:If500pxPost}
+        <img src="{PhotoURL-500}" />
+         {/block:If500pxPost}
+         </a>
+        
+        {LinkCloseTag}{block:Caption}{block:ifDisplayCaptions}<div class="post-text">{Caption}</div>{/block:ifDisplayCaptions}{/block:Caption}{/block:Photo}
+                 
+        {block:Photoset}
+        
+        {block:IfNot500pxPost}
+        {Photoset-400}
+        {/block:IfNot500pxPost}
+        
+         {block:If500pxPost}
+        {Photoset-500}
+         {/block:If500pxPost}
+        
+        {block:Caption}{block:ifDisplayCaptions}<div class="post-text">{Caption}</div>{/block:ifDisplayCaptions}{/block:Caption}{/block:Photoset}
+                 
+        {block:Quote}<div class="post-text">{Quote}{block:Source} —{Source}</div>{/block:Source}{/block:Quote}
+                 
+        {block:Link}<div class="post-text"><h1><a href="{URL}" {Target}>{Name}</a></h1>{block:Description}{Description}{/block:Description}</div>{/block:Link}
+                 
+        {block:Chat}<div class="post-text">{block:Title}<h1>{Title}</h1>{/block:Title}<p>{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}</p></div>{/block:Chat}
+                 
+        {block:Audio}{AudioPlayerWhite}{block:Caption}<div class="post-text">{Caption}</div>{/block:Caption}{/block:Audio}
+             
+        {block:Video}
+        
+         {block:IfNot500pxPost}
+         {Video-400}
+          {/block:IfNot500pxPost}
+        
+         {block:If500pxPost}
+        {Video-500}
+         {block:If500pxPost}
+        
+        {block:Caption}<div class="post-text">{Caption}</div>{/block:Caption}{/block:Video}
+             
+        {block:Answer}<div class="post-text"><div id="asker"><img src="{AskerPortraitURL-24}"></div>{Asker}:<br>{Question}<br>{Answer}</div>{/block:Answer}
+                
+                 
+        {block:PostNotes}{PostNotes}{/block:PostNotes}
+        
+        {block:ifPostFooter}
+        <div class="info">
+        
+            {block:ifShowTags}{block:HasTags}<div class="tags"><p>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</p></div>{/block:HasTags}{/block:ifShowTags}
+        
+            <div class="dates">
+            {block:Date}<a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}</a>{/block:Date} {block:NoteCount} — <a href="{Permalink}">{NoteCountWithLabel}{/block:NoteCount} </a>
+                
+                {block:RebloggedFrom} <span class="reblogged">via:<a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a> source:<a href="{ReblogRootURL}"title="{ReblogRoottitle}">{ReblogRootName}</a></span>{/block:RebloggedFrom}
+             </div><!--/.dates-->   
+             
+               {block:ifReblogandLikeButtons}        
+    {block:Date} <!-- Wrap in date block to hide buttons on Tumblr Pages -->
+    <div class="post-buttons">
+        <ul>
+            <li>{ReblogButton size="13"}</li>
+            <li>{LikeButton size="13"}</li>
+        </ul>
+    </div><!--/.post-buttons -->
+    {/block:Date}
+    {/block:ifReblogandLikeButtons}  
+            
+            <div class="clearfix"></div>
+                
+        </div><!-- /.info -->
+        {/block:ifPostFooter}
+                
+    </div><!-- /.posts -->
+        
+    {/block:Posts}
+    
+    </div><!--/.entries -->
+    
+<!-- ================================
+    S I D A B A R
+    ================================ -->
+    
+    <div class="sidebar">
+    
+        <div class="sidebar-div">
+        <div class="sidebar-img">
+        <img src="{image:Sidebar Image}" />
+        </div>
+        </div><!-- /.sidebar-div -->
+        
+        <div class="sidebar-div">
+        <p class="sidebar-content">{Description}</p>
+        </div><!-- /.sidebar-div -->
+        
+        {block:ifShowTagList}
+        <div class="sidebar-div">
+        <h3>TAGS</h3>
+        <div id="tagCloud" class="sidebar-content"></div><script type="text/javascript" src="//post-theory.com/public/tagcloud/{text:TumblrName}?tn={Name}&sort=frequency&sort2=alphabetical&limit=100&mincount=2&posthist=count&scale=false&case=title&html=ulplain&pad=6" async="async"></script>
+        </div><!-- /.sidebar-div -->
+        {/block:ifShowTagList}
+        
+    </div><!-- /.sidebar -->
+    
+    <div class="clearfix"></div>
+    
+            <div id="pagination">
+        {block:Pagination}{block:PreviousPage}
+                <a href="{PreviousPage}">«</a>
+            {/block:PreviousPage}{block:JumpPagination length="10"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                <a href="{NextPage}">»</a>
+            {/block:NextPage}{/block:Pagination}  
+    </div><!-- /.pagination -->
+    
+</div><!-- /.container -->
+
+{block:ifDisplayFooter}<footer>&copy; {CopyrightYears} {Title}</footer>{/block:ifDisplayFooter}
+
+<div id="cn"><!----DO NOT REMOVE THIS CODE----->
+<a href="http://castlenovathemes.tumblr.com"><span id="cn-control">☂</span> <span id="credit">castlenovathemes</span></a>
+</div>
+
+<script>//fade in
+    $(".container").fadeIn(900);
+</script>
+
+<script>//credit animation
+    $("#cn-control").hover( function() {
+    $("#credit").show("slow");
+    });
+</script>
+    
+<script>//fixed navbar
+    var mn = $(".main-nav");
+    
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 76 ) {
+          mn.addClass("main-nav-scrolled")  
+        }   
+        else {
+          mn.removeClass("main-nav-scrolled")  
+        }
+    });
+</script>
+
+
+
+
+
+</body></html>

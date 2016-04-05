@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<!---- 
+
+     More themes @ http://castlenovathemes.tumblr.com
+         
+
+  ___ __    __ _____ _   ___ __  _  __   _   _   __   
+ / _//  \ /' _/_   _| | | __|  \| |/__\ | \ / | /  \  
+| \_| /\ |`._`. | | | |_| _|| | ' | \/ |`\ V /'| /\ | 
+ \__/_||_||___/ |_| |___|___|_|\__|\__/   \_/  |_||_|
+ 
+ 
+ ✿ HEADER
+ ✿ SIDEBAR
+ ✿ NAVIGATION
+ ✿ ENTRIES
+ ✿ PAGINATION
+ ✿ FOOTER
+
+-->
+
+<!-- ******** I M A G E S ******** -->
+<meta name="image:Background Image" content="http://static.tumblr.com/ae94bed3136daa6ce7b0b1a067564d2a/by7vxd4/H0Go55901/tumblr_static_7d77xdk8fhk4owss8ws0o4scc.png"/>
+<meta name="image:Sidebar Image" content="http://static.tumblr.com/325b855cebc0fc6146592ef358011435/by7vxd4/R1Yo55895/tumblr_static_33fwp0oolvk0kgoo8wwkwo80o.gif"/>
+
+
+<!-- ******** C O L O R S ******** --> 
+<meta name="color:Accent" content="lightblue"/>
+<meta name="color:Accent 2" content="#777"/>
+<meta name="color:Background" content="#dadfe5"/>
+<meta name="color:Divider" content="lightblue"/>
+<meta name="color:Title" content="#b5c5c6"/>
+<meta name="color:Navbar Background 1" content="#f5f5f5"/>
+<meta name="color:Navbar Text" content="#9d9d9d"/>
+<meta name="color:Navbar Text Hover" content="#97d7b7"/>
+<meta name="color:Nav Hover" content="4a9277"/>
+<meta name="color:Post Text" content="#2b2b2b"/>
+<meta name="color:Post Footer Text" content="#aaaaaa"/>
+<meta name="color:Tag Text" content="#cccccc"/>
+<meta name="color:Link" content="#b8cdd1"/>
+<meta name="color:Pagination" content="#a8a8a8"/>
+<meta name="color:Footer" content="#888"/>
+<meta name="color:Scrollbar" content="#afb8b8"/>
+<meta name="color:Scrollbar Background" content="#fff"/>
+<meta name="color:Sidebar Text" content="#a2a1a1"/>
+
+
+
+
+<!-- ******** T E X T ******** -->
+<meta name="text:Link 1" content="Home"/>
+<meta name="text:Link 1 URL" content="/"/>
+<meta name="text:Link 2" content="Ask"/>
+<meta name="text:Link 2 URL" content="/ask"/>
+<meta name="text:Link 3" content="Link 3"/>
+<meta name="text:Link 3 URL" content=""/>
+<meta name="text:Link 4" content="Link 4"/>
+<meta name="text:Link 4 URL" content=""/>
+<meta name="text:Link 5" content="Link 5"/>
+<meta name="text:Link 5 URL" content=""/>
+<meta name="text:Link 6" content="Link 6"/>
+<meta name="text:Link 6 URL" content=""/>
+
+
+ 
+<!-- ******** B O O L E A N S ******** -->
+<meta name="if:Show Tags" content="1"/>
+<meta name="if:Reblog and Like Buttons" content="1"/>
+<meta name="if:Display Footer" content="1"/>
+<meta name="if:Display Captions" content="1"/>
+
+
+
+<!-- ******** G O O G L E   F O N T S ******** -->
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+
+
+<link href='https://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+
+<!-- ******** J Q U E R Y ******** -->
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<style type="text/css">
+
+
+
+ /*
+ ======================================================================
+ 
+                            *** F O N T S ***
+        
+ ======================================================================
+ */
+
+body {
+    
+    font-family: 'Imprima', sans-serif;
+    font-size: 12px;
+
+}
+
+.title {
+    font-family: 'VT323', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2.7em;
+}
+
+.nav {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.logo, #pagination {
+     text-align: center;
+ }
+ 
+#pagination {
+    font-size: .8em;
+}
+
+#pagination a {
+
+}
+
+ .sidebar-content {
+     font-size: .9em;
+ }
+ 
+  .sidebar-div h3 {
+     font-weight: normal;
+ }
+
+.post h1 {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.tags {
+    font-size: .7em;
+    text-transform: uppercase;
+}
+
+.dates {
+    font-size: .8em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.reblogged {
+    opacity: .6;
+    font-size: 400;
+    font-size: .8em;
+}
+
+footer {
+    font-size: .9em;
+}
+
+
+ /*
+ ======================================================================
+ 
+                            *** C O L O R S ***
+        
+ ======================================================================
+ */
+
+a {
+    color:{color:link};
+}
+
+body {
+    background:{color:background};
+    background-image: url("{image:Background Image}");
+    color:{color:text};
+    background-attachment: fixed;
+}
+
+.dates a {
+        color: rgba(0,0,0,.6);
+}
+
+footer {
+    color: {color:Footer};    
+}
+
+info {
+    background-color: rgba(0,0,0,.01);
+}
+
+.info a {
+    color: {color:Post Footer Text};
+}
+
+.nav li a {
+    color: {color:Navbar Text}; 
+}
+
+
+.nav li a:hover {
+    color: {color:Navbar Text Hover}; 
+}
+
+
+.nav li {
+    background-color:{color:Navbar Background 1};  
+}
+
+.nav li:hover {
+    color: {color:Navbar Text Hover};
+    opacity: .8;
+    background-color: {color:Nav Hover};
+}
+
+#pagination a {
+    color:{color:Pagination};
+}
+
+#tagCloud ul li:hover {
+    background-color: {color:Tag List Hover};
+}
+
+
+.post {
+    color: {color:Post Text};
+}
+
+.sidebar,
+.nav-title
+{
+    color: {color:Sidebar Text};
+}
+
+.tags a {
+    color: {color:Tag Text};
+}
+
+.title a{
+    color: {color:Title};
+}
+
+.container {
+background-color: white;
+}
+
+.outline-3-pad {
+    background-color: white;
+}
+
+
+
+ /*
+ ======================================================================
+ 
+                            *** L A Y O U T ***
+        
+ ======================================================================
+ */
+
+::-webkit-scrollbar {width: 6px; height: 4px; background: {color:Scrollbar Background}; }
+::-webkit-scrollbar-thumb { background-color: {color:Scrollbar}; }
+ 
+body {
+    margin:0px;
+}
+ 
+a {
+    text-decoration:none;
+    outline:none;
+    -moz-outline-style:none;
+}
+ 
+img {
+    border:none;
+}
+ 
+blockquote {
+    padding-left:5px;
+    border-left:4px solid;
+    margin-left: 20px;
+}
+   
+blockquote blockquote {
+    padding-left:5px;
+    border-left:4px solid;
+    margin-left: 20px;
+}
+
+
+
+
+
+ /*
+ ======================================================================
+                            H E A D E R
+ ======================================================================
+ */
+ .title {
+    padding: 10px 0 0px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 20px 5px 0;
+    width: 760px;
+}
+
+ 
+
+ /*
+ ======================================================================
+                            N A V I G A T I O N
+ ======================================================================
+ */
+ 
+header {
+}
+
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+
+}
+
+.nav li {
+    text-align: center;
+    width: 49%;
+    float: left;
+    margin: 1px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.3);
+ }
+ 
+ .nav li a {
+    display: block;  
+    padding: 5px 0px; 
+ }
+
+ .container {
+     width: 750px;
+     margin: 0 auto;
+     padding: 20px 5px 20px 10px;
+     border:1px solid black;
+ }
+
+
+ /*
+ ======================================================================
+                            P O S T
+ ======================================================================
+ */
+ 
+ .entries {
+     width: 520px;
+     height: 460px;
+     padding-right: 10px;
+     float:right;
+     overflow-y: scroll;
+     border-left: 5px solid {color:Divider};
+ }
+ 
+ .post {
+     margin-left: 10px;
+ }
+ 
+  {block:IfNot500pxPost}
+.post {
+     width: 400px;
+ } {/block:IfNot500pxPost}
+  
+ 
+ {block:If500pxPost}
+.post {
+   width: 500px;  
+ } {block:If500pxPost}
+
+.dates {
+    float: left;
+}
+
+
+
+.post {
+    margin-bottom: 30px;
+}
+
+.post-buttons {
+    float: right;
+}
+
+.post-buttons ul, .post-buttons li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.post-buttons li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+
+
+.info {
+    border-top: 1px dashed rgba(0,0,0,.3);
+    padding: 4px 0;
+
+}
+
+.tags {
+    padding: 2px 0;
+}
+
+.tags a {
+    margin-right: 4px;
+
+}
+
+#pagination {
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+#pagination a, .current_page {
+    padding: 4px 10px;
+}
+
+
+ 
+#asker {
+    float:left;
+    margin-right:5px;
+}
+
+
+ /*
+ ======================================================================
+                            S I D E B A R
+ ======================================================================
+ */
+ 
+ .sidebar {
+     width: 200px;
+     height: 460px;
+     float: left;
+ }
+ 
+ .sidebar-div {
+    margin-bottom: 20px;
+ }
+ 
+ .sidebar-div h3 {
+     margin: 0 0 5px 0;
+     padding: 5px 0px;
+     border-bottom: 1px dashed {color:Sidebar Text};
+ }
+ 
+ .sidebar-content {
+     margin: 0;
+ }
+ 
+ .sidebar-img {
+     text-align: center;
+ }
+ 
+ .sidebar-img img{
+     max-width: 50%;
+     border-radius: 100px;
+ }
+ 
+#tagCloud ul li {
+    padding: 4px 5px;
+}
+
+#tagCloud {
+}
+
+#tagCloud ul {
+    margin: 0;
+}
+
+
+/*
+ ======================================================================
+                            F O O T E R
+ ======================================================================
+ */
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*
+ ======================================================================
+                            M I S C
+ ======================================================================
+ */
+
+.clearfix {
+    clear: both;
+}
+
+#cn {
+    position:fixed;
+    padding:0px 10px;
+    bottom:0;
+    right:0;
+}
+
+#cn a {
+    color: rgba(0,0,0,.3);
+}
+
+#cn:hover {
+}
+
+#credit {
+    display: none;
+}
+
+.outline {
+    border: 5px dashed {color:Accent};
+     box-shadow: 0 0 0 3px {color:Accent 2},
+     0 0 0 6px {color:Accent};
+}
+
+.outline-2 {
+    border: 2px dotted {color:Accent 2};
+     box-shadow: 0 0 0 3px {color:Accent},
+     0 0 0 6px {color:Accent 2};
+}
+
+.outline-3-pad {
+    border: 1px solid rgba(0,0,0,.4);
+    padding: 5px;
+    max-height: 100px;
+    overflow-y: auto;
+    box-shadow: inset 0 0 0 2px {color:Accent};
+}
+
+.push-down {
+    margin-top: 10px;
+}
+
+.nav-title {
+    display: block;
+    text-align:center;
+    padding: 5px;
+    border: 1px dotted rgba(0,0,0,.4);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+{CustomCSS}
+    
+</style>
+
+    
+</head>
+
+
+
+
+ <!--
+ ======================================================================
+ 
+                            *** H T M L ***
+        
+ ======================================================================
+ -->
+ 
+<body>
+
+<header>
+    <div class="title"><a href="/">{Title}</a></div>
+        
+    </header>
+    
+<div class="container outline-2">
+
+    
+    
+    
+<!-- ================================
+    S I D A B A R
+    ================================ -->
+    
+    <div class="sidebar">
+    
+        <div class="sidebar-div push-down">
+        <div class="sidebar-img">
+        <img src="{image:Sidebar Image}" class="outline" />
+        </div>
+        </div><!-- /.sidebar-div -->
+        
+        <div class="sidebar-div">
+        <p class="sidebar-content outline-3-pad">{Description}</p>
+        </div><!-- /.sidebar-div -->
+        
+        <div class="sidebar-div">
+        <nav class="main-nav">
+            <span class="nav-title">Navigation</span>
+            <ul class="nav">
+                <li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>
+                <li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>
+                <li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>
+                <li><a href="{text:Link 4 URL}">{text:Link 4}</a></li>
+                <li><a href="{text:Link 5 URL}">{text:Link 5}</a></li>
+                <li><a href="{text:Link 6 URL}">{text:Link 6}</a></li>
+            </ul>
+        </nav>
+        </div>
+        
+        <div class="sidebar-div">
+         <div id="pagination">
+        {block:Pagination}{block:PreviousPage}
+                <a href="{PreviousPage}">«</a>
+            {/block:PreviousPage}{block:JumpPagination length="10"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                <a href="{NextPage}">»</a>
+            {/block:NextPage}{/block:Pagination}  
+    </div><!-- /.pagination -->
+    </div>
+    
+    </div><!-- /.sidebar -->
+    
+    <div class="entries">
+    {block:Posts}
+    
+    <div class="post">
+            
+        {block:Text}<div class="post-text"><h1>{block:Title}<a href="{Permalink}">{Title}</a>{/block:Title}</h1>{Body}</div>{/block:Text}
+                 
+        {block:Photo}{LinkOpenTag}
+        <a href="{Permalink}"><img src="{PhotoURL-500}" /></a>
+        
+        {LinkCloseTag}{block:Caption}{block:ifDisplayCaptions}<div class="post-text">{Caption}</div>{/block:ifDisplayCaptions}{/block:Caption}{/block:Photo}
+                 
+        {block:Photoset}
+    
+        {Photoset-500}
+
+        
+        {block:Caption}{block:ifDisplayCaptions}<div class="post-text">{Caption}</div>{/block:ifDisplayCaptions}{/block:Caption}{/block:Photoset}
+                 
+        {block:Quote}<div class="post-text">{Quote}{block:Source} —{Source}</div>{/block:Source}{/block:Quote}
+                 
+        {block:Link}<div class="post-text"><h1><a href="{URL}" {Target}>{Name}</a></h1>{block:Description}{Description}{/block:Description}</div>{/block:Link}
+                 
+        {block:Chat}<div class="post-text">{block:Title}<h1>{Title}</h1>{/block:Title}<p>{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}</p></div>{/block:Chat}
+                 
+        {block:Audio}{AudioPlayerWhite}{block:Caption}<div class="post-text">{Caption}</div>{/block:Caption}{/block:Audio}
+             
+        {block:Video}
+        
+         {block:IfNot500pxPost}
+         {Video-400}
+          {/block:IfNot500pxPost}
+        
+         {block:If500pxPost}
+        {Video-500}
+         {block:If500pxPost}
+        
+        {block:Caption}<div class="post-text">{Caption}</div>{/block:Caption}{/block:Video}
+             
+        {block:Answer}<div class="post-text"><div id="asker"><img src="{AskerPortraitURL-24}"></div>{Asker}:<br>{Question}<br>{Answer}</div>{/block:Answer}
+                
+                 
+        {block:PostNotes}{PostNotes}{/block:PostNotes}
+        
+        {block:Date}
+        <div class="info">
+        
+            {block:ifShowTags}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}{/block:ifShowTags}
+        
+            <div class="dates">
+            {block:Date}<a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}</a>{/block:Date} {block:NoteCount} — <a href="{Permalink}">{NoteCountWithLabel}{/block:NoteCount} </a>
+                
+                {block:RebloggedFrom} <span class="reblogged">via:<a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a> source:<a href="{ReblogRootURL}"title="{ReblogRoottitle}">{ReblogRootName}</a></span>{/block:RebloggedFrom}
+             </div><!--/.dates-->   
+             
+               {block:ifReblogandLikeButtons}        
+    {block:Date} <!-- Wrap in date block to hide buttons on Tumblr Pages -->
+    <div class="post-buttons">
+        <ul>
+            <li>{ReblogButton size="13"}</li>
+            <li>{LikeButton size="13"}</li>
+        </ul>
+    </div><!--/.post-buttons -->
+    {/block:Date}
+    {/block:ifReblogandLikeButtons}  
+            
+            <div class="clearfix"></div>
+                
+        </div><!-- /.info -->
+        {/block:Date}
+
+        <div class="clearfix"></div>
+                
+    </div><!-- /.posts -->
+        
+    {/block:Posts}
+    
+    </div><!--/.entries -->
+    
+
+    
+    <div class="clearfix"></div>
+    
+           
+    
+</div><!-- /.container -->
+
+{block:ifDisplayFooter}<footer>&copy; {CopyrightYears} {Title}</footer>{/block:ifDisplayFooter}
+
+<div id="cn"><!----DO NOT REMOVE THIS CODE----->
+<a href="http://castlenovathemes.tumblr.com"><span id="cn-control">☂</span> <span id="credit">castlenovathemes</span></a>
+</div>
+
+
+
+<script>//credit animation
+    $("#cn-control").hover( function() {
+    $("#credit").show("slow");
+    });
+</script>
+    
+
+
+
+
+
+</body></html>

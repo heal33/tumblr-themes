@@ -1,0 +1,716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.css">
+
+
+<!---- 
+
+     More themes @ http://castlenovathemes.tumblr.com
+         
+
+  ___ __    __ _____ _   ___ __  _  __   _   _   __   
+ / _//  \ /' _/_   _| | | __|  \| |/__\ | \ / | /  \  
+| \_| /\ |`._`. | | | |_| _|| | ' | \/ |`\ V /'| /\ | 
+ \__/_||_||___/ |_| |___|___|_|\__|\__/   \_/  |_||_|
+ 
+ 
+ ✿ HEADER
+ ✿ SIDEBAR
+ ✿ NAVIGATION
+ ✿ ENTRIES
+ ✿ PAGINATION
+ ✿ FOOTER
+
+-->
+
+<!-- ******** I M A G E S ******** -->
+<meta name="image:Background Image" content=""/>
+<meta name="image:Profile Image" content=""/>
+
+
+<!-- ******** C O L O R S ******** --> 
+<meta name="color:Background" content="#c3bfbf"/>
+<meta name="color:Title" content="#747e5d"/>
+<meta name="color:Sidebar Link" content="#50b6a0"/>
+<meta name="color:Navbar Button" content="#fefbf8"/>
+<meta name="color:Navbar Button Hover" content="#427ea3"/>
+<meta name="color:Navbar Text" content="#202020"/>
+<meta name="color:Navbar Text Hover" content="#ffffff"/>
+<meta name="color:Post Background" content="#ffffff"/>
+<meta name="color:Post Text" content="#4c4b4b"/>
+<meta name="color:Post Footer Text" content="#a4eac8"/>
+<meta name="color:Links" content="#427ea3"/>
+<meta name="color:Footer" content="#91b7b8"/>
+<meta name="color:Scrollbar" content="#427ea3"/>
+<meta name="color:Scrollbar Background" content="#ffffff"/>
+<meta name="color:Profile Background" content="#fff"/>
+<meta name="color:Profile Text" content="#444"/>
+<meta name="color:Profile Border" content="#ccc"/>
+
+
+<!-- ******** T E X T ******** -->
+<meta name="text:Link 1" content="Link 1"/>
+<meta name="text:Link 1 URL" content="/"/>
+<meta name="text:Link 2" content="Link 2"/>
+<meta name="text:Link 2 URL" content="/"/>
+<meta name="text:Link 3" content="Link 3"/>
+<meta name="text:Link 3 URL" content="/"/>
+<meta name="text:Link 4" content="Theme"/>
+<meta name="text:Link 4 URL" content="http://castlenovathemes.tumblr.com/"/>
+
+
+<!-- ******** B O O L E A N S ******** -->
+<meta name="if:Show Tags" content="0"/>
+<meta name="if:Reblog and Like Buttons" content="0"/>
+<meta name="if:Display Footer" content="0"/>
+<meta name="if:Display Captions" content="0"/>
+<meta name="if:Mini Blog" content="0"/>
+<meta name="if:Vertical Profile" content="0"/>
+<meta name="if:Side Links" content="0"/>
+<meta name="if:Tile Background" content="0"/>
+
+
+<!-- ******** J Q U E R Y ******** -->
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<style type="text/css">
+
+
+
+ /*
+ ======================================================================
+ 
+                            *** F O N T S ***
+        
+ ======================================================================
+ */
+
+body {
+    font-size: 11px;
+
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 2.2em;
+}
+
+#pagination {
+     text-align: center;
+ }
+ 
+#pagination {
+}
+
+.post h1 {
+    font-weight: normal;
+}
+
+.tags,
+.dates {
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+.reblogged {
+    opacity: .7;
+    font-size: 400;
+    font-size: .9em;
+}
+
+footer {
+    font-size: .9em;
+}
+
+
+ /*
+ ======================================================================
+ 
+                            *** C O L O R S ***
+        
+ ======================================================================
+ */
+
+a {
+    color:{color:links};
+}
+
+body {
+    background:{color:background};
+    background-image: url("{image:Background Image}");
+    {block:ifNotTileBackground}
+    background-size: cover;
+    {/block:ifNotTileBackground}
+    color:{color:text};
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: {color:Post Background};
+}
+
+footer {
+    color: {color:Footer};    
+}
+
+info {
+    background-color: rgba(0,0,0,.01);
+}
+
+.info a {
+    color: {color:Post Footer Text};
+}
+
+.nav li a {
+    color: {color:Navbar Text}; 
+}
+
+
+.nav li a:hover {
+    color: {color:Navbar Text Hover}; 
+}
+
+
+.nav li {
+    background-color:{color:Navbar Button};  
+}
+
+.nav li:hover {
+    color: {color:Navbar Text Hover};
+    background-color: {color:Navbar Button Hover};
+}
+
+#pagination a {
+    color:{color:Post Text};
+}
+
+.post {
+    color: {color:Post Text};
+}
+
+.title a{
+    color: {color:Title};
+}
+
+ /*
+ ======================================================================
+ 
+                            *** L A Y O U T ***
+        
+ ======================================================================
+ */
+
+::-webkit-scrollbar {width: 6px; height: 4px; background: {color:Scrollbar Background}; }
+::-webkit-scrollbar-thumb { 
+    background-color: {color:Scrollbar};
+}
+ 
+body {
+    margin:0px;
+}
+ 
+a {
+    text-decoration:none;
+    outline:none;
+    -moz-outline-style:none;
+}
+ 
+img {
+    border:none;
+}
+ 
+blockquote {
+    padding-left:5px;
+    border-left:4px solid;
+    margin-left: 20px;
+}
+   
+blockquote blockquote {
+    padding-left:5px;
+    border-left:4px solid;
+    margin-left: 20px;
+}
+
+
+
+ /*
+ ======================================================================
+                            H E A D E R
+ ======================================================================
+ */
+ 
+ header {
+     position: fixed;
+     left: 30px;
+     width: 60px;
+ }
+ 
+.title {
+    padding: 10px 0 0px 0;
+    margin: 0 auto;
+}
+
+.col-2 {
+    float: left;
+}
+
+.links  {
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.links li {
+    margin-bottom: 4px;
+}
+
+.links li > a {
+  position: relative;
+  color: {color:Sidebar Link};
+  text-decoration: none;
+}
+
+.links li > a:hover {
+  color: {color:Sidebar Link};
+}
+
+.links li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: {color:Sidebar Link};
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.links li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+ 
+
+ /*
+ ======================================================================
+                            N A V I G A T I O N
+ ======================================================================
+ */
+ {block:ifNotMiniBlog}
+.main-nav {
+    position: fixed;
+}
+{/block:ifNotMiniBlog}
+ 
+.nav {
+    list-style: none;
+    margin: 0 10px 0 0;
+    padding: 0;
+    width:50px;
+}
+
+.nav li {
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+ }
+ 
+ .nav li a {
+    display: block;  
+    padding: 10px;
+ }
+ 
+ .wrapper {
+     width: 610px;
+     margin: 0 auto;
+     margin-top: 60px;
+ }
+ 
+ .container {
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+    {block:ifNotMiniBlog}
+    margin-left: 60px;
+    {/block:ifNotMiniBlog}
+    
+    {block:ifNotDisplayFooter}
+    margin-bottom: 20px;
+    {/block:ifNotDisplayFooter}
+ }
+
+
+
+ /*
+ ======================================================================
+                            P O S T
+ ======================================================================
+ */
+ 
+ .entries {
+     {block:ifMiniBlog}
+     width: 510px;
+     {/block:ifMiniBlog}
+     {block:ifNotMiniBlog}
+     width: 500px;
+     {/block:ifNotMiniBlog}
+ }
+ 
+.post {
+    margin-bottom: 30px;
+}
+
+.post h1 {
+    margin-top: 0;
+}
+
+.post-text {
+    width: 500px;
+}
+
+.post-buttons ul, .post-buttons li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.post-buttons li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.info {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.tags,
+.dates {
+    display: inline-block;
+    padding: 3px;
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+.tags a {
+    margin-right: 4px;
+    
+}
+
+.info-row {
+    padding: 5px 0;
+}
+
+#pagination {
+    padding: 5px 10px;
+}
+
+#pagination a, .current_page {
+    padding: 4px 10px;
+}
+
+#asker {
+    float:left;
+    margin-right:5px;
+}
+
+/*
+ ======================================================================
+                            F O O T E R
+ ======================================================================
+ */
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*
+ ======================================================================
+                            M I S C
+ ======================================================================
+ */
+
+.clearfix {
+    clear: both;
+}
+
+#cn {
+    position:fixed;
+    padding:0px 10px;
+    bottom:0;
+    right:0;
+    opacity: .5;
+}
+
+#cn:hover {
+}
+
+#credit {
+    display: none;
+}
+
+#cn a {
+    color: black;
+}
+
+{block:ifMiniBlog}
+.fixed-container {
+     height: 350px;
+     overflow-y: auto;
+     overflow-x: hidden;
+}
+{/block:ifMiniBlog}
+
+{block:ifVerticalProfile}
+.about {
+    text-align: center;
+}
+{/block:ifVerticalProfile}
+
+.about {
+    {block:ifVerticalProfile}width: 200px;{/block:ifVerticalProfile}
+    {block:ifNotVerticalProfile}width: 450px;{/block:ifNotVerticalProfile}
+    position: fixed;
+    background-color: {color:Profile Background};
+    color: {color:Profile Text};
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid {color:Profile Border};
+    display: none;
+}
+
+.about img,
+.about-text {
+    {block:ifVerticalProfile}float: none;{/block:ifVerticalProfile}
+    {block:ifNotVerticalProfile}float: left;{/block:ifNotVerticalProfile}
+}
+
+.about img {
+    {block:ifVerticalProfile}width:200px; height:200px;{/block:ifVerticalProfile}
+    {block:ifNotVerticalProfile}width:150px; height:150px;{/block:ifNotVerticalProfile}
+}
+
+.about-text {
+    {block:ifVerticalProfile}{/block:ifVerticalProfile}
+    {block:ifNotVerticalProfile}width:300px;{/block:ifNotVerticalProfile}
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/*
+ ======================================================================
+                            jQeury CSS
+ ======================================================================
+ */
+.body-darken {
+    background-color: black;
+    position: fixed;
+    opacity: .8;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    transition: all .25s;
+}
+
+{CustomCSS}
+    
+</style>
+
+    
+</head>
+
+
+
+
+ <!--
+ ======================================================================
+ 
+                            *** H T M L ***
+        
+ ======================================================================
+ -->
+ 
+<body>
+
+    
+    <header>
+        <div class="title"><a href="/">{Title}</a></div>
+        {block:ifSideLinks}
+        <ul class="links">
+            <li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>
+            <li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>
+            <li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>
+            <li><a href="{text:Link 4 URL}">{text:Link 4}</a></li>
+        </ul>
+        {/block:ifSideLinks}
+    </header>
+    
+    
+    <div class="wrapper">
+        <nav class="main-nav col-2">
+            <ul class="nav">
+                <li><a href="/" title="Home"><i class="fa fa-home fa-2x"></i></a></li>
+                <li><a href="/ask" title="Ask"><i class="fa fa-envelope fa-2x"></i></a></li>
+                <li><a href="/archive" title="Archive"><i class="fa fa-archive fa-2x"></i></a></li>
+                <li class="control-about"><a href="#" title="About"><i class="fa fa-user fa-2x"></i></a></li>
+            </ul>
+        </nav>
+        <div class="container col-2">  
+            <div class=" fixed-container">
+                <div class="entries">
+                    {block:Posts}
+                
+                    <div class="post">
+                        
+                        {block:Text}<div class="post-text"><h1>{block:Title}<a href="{Permalink}">{Title}</a>{/block:Title}</h1>{Body}</div>{/block:Text}
+                                 
+                        {block:Photo}{LinkOpenTag}
+                        <a href="{Permalink}"><img src="{PhotoURL-500}" /></a>
+                        
+                        {LinkCloseTag}{block:Caption}{block:ifDisplayCaptions}<div class="post-text">{Caption}</div>{/block:ifDisplayCaptions}{/block:Caption}{/block:Photo}
+                                 
+                        {block:Photoset}
+                    
+                        {Photoset-500}
+                
+                        
+                        {block:Caption}{block:ifDisplayCaptions}<div class="post-text">{Caption}</div>{/block:ifDisplayCaptions}{/block:Caption}{/block:Photoset}
+                                 
+                        {block:Quote}<div class="post-text">{Quote}{block:Source} —{Source}</div>{/block:Source}{/block:Quote}
+                                 
+                        {block:Link}<div class="post-text"><h1><a href="{URL}" {Target}>{Name}</a></h1>{block:Description}{Description}{/block:Description}</div>{/block:Link}
+                                 
+                        {block:Chat}<div class="post-text">{block:Title}<h1>{Title}</h1>{/block:Title}<p>{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}</p></div>{/block:Chat}
+                                 
+                        {block:Audio}{AudioPlayerWhite}{block:Caption}<div class="post-text">{Caption}</div>{/block:Caption}{/block:Audio}
+                             
+                        {block:Video}
+                        
+                         {Video-500}
+                        
+                        {block:Caption}<div class="post-text">{Caption}</div>{/block:Caption}{/block:Video}
+                             
+                        {block:Answer}<div class="post-text"><div id="asker"><img src="{AskerPortraitURL-24}"></div>{Asker}:<br>{Question}<br>{Answer}</div>{/block:Answer}
+                                
+                                 
+                        {block:PostNotes}{PostNotes}{/block:PostNotes}
+                        
+                        {block:Date}
+                        
+                        <div class="info">
+                        
+                            <div class="info-row">
+                                <div class="dates">
+                                    {block:Date}<a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix}</a>{/block:Date} {block:NoteCount} — <a href="{Permalink}">{NoteCountWithLabel}{/block:NoteCount} </a>
+                        
+                                    {block:RebloggedFrom} <span class="reblogged">via:<a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a> source:<a href="{ReblogRootURL}"title="{ReblogRoottitle}">{ReblogRootName}</a></span>{/block:RebloggedFrom}
+                                </div><!--/.dates--> 
+                        
+                                {block:ifShowTags}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}{/block:ifShowTags}
+                          
+                                </div><!--/.info-row-->  
+                             
+                               {block:ifReblogandLikeButtons}  
+                               {block:Date}
+                            <div class="post-buttons info-row">
+                                <ul>
+                                    <li>{LikeButton size="12"}</li>
+                                    <li>{ReblogButton size="12"}</li>
+                                </ul>
+                            </div><!--/.post-buttons -->
+                            {/block:Date}
+                            {/block:ifReblogandLikeButtons}  
+                    
+                            <div class="clearfix"></div>
+                        </div><!-- /.info -->
+                        {/block:Date}
+                            
+                    </div><!-- /.posts -->
+                    {/block:Posts}
+            
+                </div><!--/.entries -->
+
+                
+                <div id="pagination">
+                            {block:Pagination}{block:PreviousPage}
+                            <a href="{PreviousPage}">«</a>
+                            {/block:PreviousPage}{block:JumpPagination length="10"}{block:CurrentPage}
+                            <span class="current_page">{PageNumber}</span>
+                            {/block:CurrentPage}{block:JumpPage}
+                            <a class="jump_page" href="{URL}">{PageNumber}</a>
+                            {/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                            <a href="{NextPage}">»</a>
+                            {/block:NextPage}{/block:Pagination}  
+                </div><!-- /.pagination -->
+            
+                   
+            </div>  <!--/.container --> 
+        </div><!-- /.container -->
+    </div><!--/.wrapper -->
+    
+    <div class="clearfix"></div>
+    {block:ifDisplayFooter}<footer>&copy; {CopyrightYears} {Title}</footer>{/block:ifDisplayFooter}
+
+    <div id="cn"><!----DO NOT REMOVE THIS CODE----->
+    <a href="http://castlenovathemes.tumblr.com"><span id="cn-control">☂</span> <span id="credit">castlenovathemes</span></a>
+    </div>
+
+    <div class="darken-me"></div>
+    
+    <div class="about">
+        <img src="{image:Profile Image}">
+        <div class="about-text">
+            <h3>{Title}</h3>
+            <p>{Description}</p>
+        </div>
+    </div>
+
+<script>//credit animation
+    $("#cn-control").hover( function() {
+    $("#credit").show("slow");
+    });
+</script>
+
+<script>
+
+    $(".control-about").click(function(){
+        $(".darken-me").addClass("body-darken");
+        $(".about").fadeIn(200);
+    });
+    
+    $(".darken-me").click(function(){
+        $(this).removeClass("body-darken");
+        $(".about").fadeOut(200);
+    });
+    
+</script>
+    
+
+
+
+
+
+</body></html>
